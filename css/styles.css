@@ -1,0 +1,696 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+a{
+    text-decoration: none;
+    color:rgb(211, 206, 206);
+}
+blockquote, q {
+	quotes: none;
+}
+body{
+    background-color: black;
+    
+    
+}
+.opening-img{
+    margin-top:50px;
+    height: 500px;
+    width:400px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 10px;
+    opacity: 1;
+    box-shadow: 0px 0px 59px #5e7a7f45;
+}
+
+/* Get started */
+.getstarted-btn button{
+    border-radius: 25px;
+    padding:10px;
+    background-color: transparent;
+    color:white;
+    font-style: italic;
+    padding:10px;
+    font-weight:500;
+    font-size: 26px;   
+}
+
+/* Header Section */
+
+header{
+    font-weight: 600;
+    font-size: 18px;
+    display: none;
+    /* border:1px solid coral; */
+}
+.top-header-section{
+    color:rgb(211, 206, 206);
+    background-color:#181818;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:15px;
+    width: auto;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.nav-section ul{
+    display: flex;
+    align-items: center;
+    gap:20px;   
+}
+.credentials-block {
+    display: flex;
+    align-items: center;
+}
+.credentials-block a{
+    padding:0px 4px;
+}
+
+
+
+/* Main Section*/
+
+/* .body-content {
+border: 1px solid red;
+} */
+.shortquote{
+    font-size: 40px!important;
+    color:white;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    padding:50px;
+    text-shadow: 6px 4px 8px lightblue;
+}
+.flightimg{
+  
+    height: 400px;
+    box-shadow: 0px 0px 59px #60E9FF45;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 10px;
+    opacity: 1;
+  }
+  .center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 60%;
+  }
+
+/* Form filling  */
+.fill-details-container {
+    width: 60%;
+    margin: auto;
+    height: fit-content;
+    border-radius: 15px;
+    padding: 40px;
+    background-color:transparent;
+    box-shadow: 2px 2px 50px grey;
+    margin-bottom: 40px;
+    background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+
+}
+.from-to-section{
+    display: flex;
+    gap:30px;
+    align-items: end;
+}
+
+.form-heading {
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+}
+
+.input-data {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    padding: 4px;
+}
+input .num-1{
+    width: 20%;
+}
+
+.input-fields {
+    background-color:transparent;
+    border-radius: 30px;
+    padding: 10px;
+    border: 1px solid #f7f7f7;
+    color: white;
+    
+}
+
+.align-center {
+    font-weight: 600;
+}
+
+.input-trip {
+    display: flex;
+    gap:16px;
+   
+}
+
+.input-trip-wrapper {
+    display: flex;
+    color: white;
+    width:fit-content;
+    border:none;
+}
+input {
+    color-scheme: dark;
+  }
+
+#round-trip-box {
+    display: none;
+}
+
+.label {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 700;
+    
+}
+.search-btn {
+    cursor: pointer;
+    background-color:transparent;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;   
+    margin-top:10px;
+}
+.search-btn:hover {
+    background-color: rgba(114, 115, 118, 0.7);
+}
+
+.uppercase-convert {
+    text-transform: uppercase;
+}
+
+/* Flight Search Page*/
+.flight-search-results {
+    display: none;
+    padding-top: 20px;
+    gap: 18px;
+    flex-direction: column;
+    background-image: url(../images/take.png);
+    background-repeat: no-repeat;
+  
+}
+
+/* Form Data Display */
+.display-input-data {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+}
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    justify-content: center;
+}
+.flight-price{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right:15px;
+    
+}
+
+.input-search {
+    width: 45%;
+    border: 1px solid white;
+}
+
+.fa-arrows-alt-h {
+    align-self: center;
+}
+
+.display-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border: none;
+    border-radius: 10px;
+    flex: 1;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    padding: 10px 0px;
+}
+.input-search-btn:hover {
+    background-color: rgb(211, 206, 206);
+}
+
+#datefield,
+#datefield-return {
+    cursor: pointer;
+     width:fit-content
+}
+
+.display-fields p {
+    margin: 0;
+    flex: 1;
+}
+
+.data-fields {
+    flex: 1; 
+    font-weight: 500;
+    font-size: 16px;
+    color:white;
+    border-radius: 25px;
+    background-color:transparent;
+    text-align: center;
+    padding:6px;
+    border: 1px solid white;
+}
+
+#datefield_div {
+    display: none;
+}
+#num-1{
+    width: 50%;
+}
+
+.search-results-body {
+    display: flex;
+    gap: 20px;
+}
+
+/* Filters Section */
+.filters {
+    background-color:transparent;
+    flex: 1;
+    color: white;
+    height: fit-content;
+    border-radius: 4px;
+    box-shadow: 2px 2px 50px grey;
+   
+
+}
+.filter-text {
+    display: flex;
+    border-bottom: 1px solid rgb(192, 192, 192, .3);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.filter-text .filter-text-element {
+    flex: 1;
+    font-weight: 600;
+    padding:6px;
+}
+
+.summary-element {
+    border-bottom: 1px solid rgb(192, 192, 192, .3);
+    padding: 20px;
+}
+
+.summary-content {
+    padding-top: 10px;
+}
+
+.label-data {
+    flex: 24;
+}
+details>summary {
+ 
+    list-style: none;
+  }
+
+.fa-chevron-up {
+    flex: 1;
+    cursor: pointer;
+}
+
+details[open] .fa-chevron-up {
+    transform: rotate(180deg);
+}
+
+.flights-information {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 4;
+}
+
+/* JSON Data*/
+.one-flight-info {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 25px;
+    background-color: transparent;
+    color: white;
+    box-shadow: 2px 2px 4px #c1bcd11a;
+    border: 1px solid;
+}
+
+.one-flight-info:hover {
+    transform: scale(0.95);
+}
+
+.flight-data {
+    flex: 1;
+    text-align: center;
+    align-self: center;
+}
+
+.flight-data-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+}
+
+.flight-brand-name {
+    font-weight: 600;
+}
+
+.number_stops {
+    font-weight: 600;
+}
+.input-search-btn {
+    cursor: pointer;
+    background-color: transparent;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* Footer Section */
+footer{
+    display:none;
+    background-color:#181818;
+    color:white;
+    padding:20px; 
+    width: auto; 
+    /* border:1px solid darkkhaki; */
+}
+
+.arrow-up{
+border-radius: 25px;
+position: absolute;
+right: 15px;
+bottom:-415px;
+
+}
+.footer-links{
+    display: flex; 
+    justify-content: space-around;
+    border-bottom: 1px solid grey;
+    padding:10px 0px;
+ 
+}
+.footer-links a{
+    line-height: 2;
+}
+
+.description-application-store{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid grey;
+    padding: 10px 0px;
+}
+.description-airways{
+    width:40%;
+   
+}
+.application-in-store{
+    display: flex;
+    flex-direction: column; 
+    padding: 10px;  
+}
+.footer-socialMedia-links{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0px;
+}
+.social-icons{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px){
+    body{
+        background: linear-gradient( #333, #f69d3c, #333 50%);
+        /* background-color: #181818; */
+    
+    }
+
+    .getstarted-btn {
+        display: flex;
+        justify-content: center;
+        padding:16px;
+        border:none;
+    }
+    /* .getstarted-btn :hover{
+        background-color: #f69d3c;
+    } */
+    .start-quote{
+        color:white;    
+        display: flex;
+        justify-content: center;
+        padding:6px;
+        font-style: italic;
+        font-size: 24px;
+    }
+    .text-img-flex {
+        color:white;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        padding:30px;
+        font-size:22px;
+        font-style: italic;
+
+    }
+    .user-img-block{
+        width:100px;
+        box-shadow: 0px 0px 59px #60E9FF45;
+        border-radius: 50%;
+        object-fit: cover;
+        padding: 10px;
+        opacity: 1;
+    }
+    .flightimg{
+        display: none;
+    }
+
+    /* Hamburger Menu */
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+        color:white;
+      }
+      
+      .topnav #myLinks {
+        display: none;
+      }
+      
+      .topnav a { 
+        padding: 12px 10px;
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+      }
+      
+      .topnav a.hamburger-menu {
+        background: transparent;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .active {
+        background-color:rgb(46, 45, 45);
+        color: white;
+      }
+      .top-header-section{
+        display: none;
+      }
+    
+    header{
+        width: auto;
+    }
+    main{
+        display:none;
+    }
+    .shortquote{
+        display: none;
+    }
+    .from-to-section{
+        flex-direction: column;
+        align-items: flex-start;
+        gap:2px;
+    }
+    .double-arrows{
+        display: none;
+    }
+    .flights-information{
+        margin:10px
+    }
+    .one-flight-info {
+        padding:6px;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .flight-price{
+        justify-content: center;
+    }
+
+    .arrow-up{
+        display: none;
+    }
+    footer{
+        padding:20px;
+    }
+    .footer-links{
+        display: block;
+        padding:0px 60px;
+        
+    }
+    .footer-links ul{
+        margin-bottom: 10px;
+    }
+    
+    .description-application-store{
+        display: block;
+        width:100%;
+        margin: auto;
+    }
+
+    .description-airways{
+        width:90%;
+        margin:auto;
+        padding-bottom: 15px;
+    }
+    .application-in-store{
+        display: flex;
+        justify-content: center;
+    }
+    .footer-socialMedia-links{
+        display: flex;
+        flex-wrap: wrap; 
+    }
+    .footer-socialMedia-links .copyright{
+        padding:10px;
+    }
+    
+   
+}
+
+@media only screen and (min-width: 769px) {
+    .opening-img{
+        display: none;
+    }
+    .start-quote{
+        display: none;
+    }
+    .text-img-flex {
+        display: none;
+    }
+    .getstarted-btn{
+        display: none;
+    }
+    header{
+        display: block;
+    }
+    main{
+        display: block;
+    }
+    footer{
+        display: block;
+    }
+    .topnav{
+        display: none;
+    }
+    .user-img-block{
+        display: none;
+    }
+    .flight-price{
+        justify-content: center;
+    }
+   
+    
+    
+}
+@media (max-width: 1000px) {
+    
+    .body-content{
+      height:fit-content;
+    }
+
+    .display-input-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 19px;   
+    }
+
+    .search-results-body {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .flights-information {
+        flex-wrap: wrap;
+        gap: 22px;
+    }
+
+    .one-flight-info {
+        padding: 4px;
+        border-radius: 20px;
+        display: flex;
+        flex: 40%;
+        flex-direction: row;
+        background-color: transparent;
+        line-height: 2;
+        width: 90%;
+        margin: auto;
+    }
+
+}
+

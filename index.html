@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,400;1,700&family=Open+Sans:wght@300;600&family=Poppins:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <!-- Get Started -->
+    <div>
+        <img class="opening-img center" src="./images/flyingplane.jpg" alt="flyingplane">
+    </div>
+    <div class="start-quote">
+        <h1>Up, up, and away ✈</h1>
+    </div>
+    <div class="getstarted-btn ">
+        <button onclick="getStarted()">Let's Get Started</button>
+    </div>
+    <!-- Header Starts -->
+    <header>
+        <!--Hamburger Menu For Mobile -->
+        <div class="topnav">
+            <div class="logo">
+                <a><img src="./Icons/taairways.png" alt="taairways"></a>
+                <a href="#home" class="active uppercase-convert">ta airways</a>
+            </div>
+            <div id="myLinks" class="uppercase-convert">
+                <a href="#signup">signup</a>
+                <a href="#login">login</a>
+                <a href="#home">home</a>
+                <a href="#contact">about</a>
+                <a href="#about">contact</a>
+            </div>
+            <div>
+                <a href="#" class="hamburger-menu" onclick="menu()">
+                    <img src="./Icons/hamburgermenu.png" alt="hamburgermenu">
+                </a>
+            </div>
+        </div>
+
+        <div class="top-header-section uppercase-convert">
+            <div class="logo">
+                <a><img src="./Icons/taairways.png" alt="taairways"></a>
+                <a href="#home" class="active">ta airways</a>
+            </div>
+            <div class="nav-section uppercase-convert">
+                <nav>
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="credentials-block">
+                <a href="#">Signup</a>
+                <a href="#"><img src="./Icons/signup.png" alt="signup" /></a>
+                <a href="#">Login</a>
+                <a href="#"><img src="./Icons/login.png" alt="login"></a>
+            </div>
+        </div>
+    </header>
+    <!-- Header Ends -->
+
+
+    <!-- Main Starts -->
+    <main>
+        <section class="body-content " id="body-content">
+
+            <div class="shortquote">
+                <h1>Book Your Flight With us and Experience the Journey ☺! </h1>
+            </div>
+            <div class="text-img-flex">
+                <div>
+                    <h3>Let's Search a flight for you 😁...</h3>
+                </div>
+                <div>
+                    <img class="user-img-block" src="./images/user-img.jfif" alt="user-img">
+                </div>
+            </div>
+            <div>
+                <img class="flightimg center" src="./images/flight.jpg" alt="flight">
+            </div>
+
+            <!--Form Data-->
+            <div class="fill-details-container ">
+                <div class="input-data ">
+                    <label class="label align-center">Trip Type</label>
+                    <div class="input-trip ">
+                        <div class="input-trip-wrapper input-fields ">
+                            <input type="radio" , id="one-trip-1" checked="checked" name="type_ticket">
+                            <label class="label-color2">One Trip</label>
+                        </div>
+                        <div class="input-trip-wrapper input-fields">
+                            <input type="radio" , id="round-trip-1" name="type_ticket">
+                            <label class="label-color2">Round Trip</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="from-to-section">
+                    <div class="input-data ">
+                        <label class="label">From</label>
+                        <input type="text" id="from-1" class="input-fields" placeholder="Origin">
+                    </div>
+                    <div>
+                        <img class="double-arrows" src="./Icons/doublearrows.png" alt="doublearrows">
+                    </div>
+                    <div class="input-data ">
+                        <label class="label">To</label>
+                        <input type="text" id="to-1" class="input-fields" placeholder="Destination">
+                    </div>
+                </div>
+
+                <div class="input-data ">
+                    <label class="label">Departure</label>
+                    <input type="date" id='datefield' class="input-fields" min="2000-01-01" max="2025-01-01"></input>
+                </div>
+                <div class="input-data " id="round-trip-box">
+                    <label class="label">Return </label>
+                    <input type="date" id="datefield-return" class="input-fields" min="2000-01-01"
+                        max="2025-01-01"></input>
+                </div>
+                <div class="input-data ">
+                    <label class="label">Passengers</label>
+                    <input type="number" id="num-1" class="input-fields" min="0" max="10">
+                </div>
+                <button class="input-fields search-btn uppercase-convert" id="search-btn">
+                    Search for flight
+                </button>
+            </div>
+        </section>
+
+        <!--Flight Search Results Page-->
+        <section class="flight-search-results" id="flight-search-results">
+
+            <!--Form Data Display Section-->
+            <div class="display-input-data">
+                <div class="display-fields">
+                    <p class="label uppercase-convert">From</p>
+                    <input type="text" id="from-2" class="data-fields" value="From">
+                </div>
+                <div class="display-fields">
+                    <p class="label uppercase-convert">To</p>
+                    <input type="text" id="to-2" class="data-fields" To="To">
+                </div>
+                <i class="fas fa-arrows-alt-h fa-lg"></i>
+                <div class="display-fields">
+                    <p class="label uppercase-convert">Departure</p>
+                    <input type="date" id="datefield-2" class="data-fields" min="2000-01-01" max="2025-01-01">
+                </div>
+
+                <div class="display-fields" id="datefield_div">
+                    <p class="label uppercase-convert">Return </p>
+                    <input type="date" id="datefield-return2" class="data-fields" min="2000-01-01" max="2025-01-01">
+                </div>
+                <div class="display-fields">
+                    <label class="label uppercase-convert">Passengers</label>
+                    <input type="number" id="num-2" class="data-fields" min="0" max="10">
+                </div>
+                <div class="display-fields">
+                    <button class="input-search-btn input-fields  uppercase-convert"
+                        id="input-search-btn">search</button>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="myInput" class="input-fields input-search" onkeyup="searching()"
+                    placeholder="Search Flights" title="Search Flights">
+            </div>
+
+            <section class="search-results-body" id="search-results-body">
+
+                <!--Filters Section-->
+                <div class="filters">
+                    <div class="filter-text ">
+                        <p class="filter-text-element">FILTERS</p>
+                    </div>
+                    <!-- Airlines Filter Section -->
+                    <details class="summary-element">
+                        <summary class="filter-element ">
+                            <label class="label-data">Airlines</label>
+                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </summary>
+                        <div class="summary-content">
+                            <input type="checkbox" class="airlines_data" id="air-asia" value="Air Asia">
+                            <label>Air Asia</label><br><br>
+                            <input type="checkbox" class="airlines_data" id="air-india" value="Air India">
+                            <label>Air India</label><br><br>
+                            <input type="checkbox" class="airlines_data" id="indigo" value="indigo">
+                            <label>Indigo</label><br><br>
+                            <input type="checkbox" class="airlines_data" id="spicejet" value="SpiceJet">
+                            <label>SpiceJet</label><br><br>
+                        </div>
+                    </details>
+                    <!-- Price Filter Section -->
+                    <details class="summary-element">
+                        <summary class="filter-element d-flex">
+                            <label class="label-data">Price</label>
+                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </summary>
+                        <div class="summary-content">
+                            <input type="range" id="range" min="2000" max="25000" step="500" value="20000">
+                            <span id="price_value"></span>
+                        </div>
+                    </details>
+                    <!-- Stops Filter Section -->
+                    <details class="summary-element">
+                        <summary class="filter-element d-flex ">
+                            <label class="label-data">Stops</label>
+                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+                        </summary>
+                        <div class="summary-content">
+                            <input type="checkbox" class="stops" id="non_stop" value="Non Stop">
+                            <label>Non Stop</label><br><br>
+                            <input type="checkbox" class="stops" id="one_stop" value="1 Stop">
+                            <label>1 Stop</label><br><br>
+                        </div>
+                    </details>
+                </div>
+                <div class="flights-information ">
+                    <!--JSON DATA -->
+                </div>
+
+            </section>
+        </section>
+    </main>
+    <!-- Main Ends -->
+
+
+    <!-- Footer Starts -->
+    <footer id="footer-section">
+        <img class="arrow-up" onclick="goToTop()" id="topbtn" src="./Icons/arrowup.png" alt="arrowup">
+        <div class="footer-links">
+
+            <ul>
+                <h3 class="uppercase-convert">our products</h3>
+                <a href="#">
+                    <li>Domestic Flights</li>
+                </a>
+                <a href="#">
+                    <li>international Flights</li>
+                </a>
+                <a href="#">
+                    <li>Nearby Getaways</li>
+                </a>
+                <a href="#">
+                    <li>Airport Cabs Booking</li>
+                </a>
+            </ul>
+
+            <ul>
+                <h3 class="uppercase-convert">about us</h3>
+                <a href="#">
+                    <li>About Us</li>
+                </a>
+                <a href="#">
+                    <li>Management</li>
+                </a>
+                <a href="#">
+                    <li>Terms of Services</li>
+                </a>
+                <a href="#">
+                    <li>User Agreement</li>
+                </a>
+                <a href="#">
+                    <li>Privacy</li>
+                </a>
+                <a href="#">
+                    <li>Careers</li>
+                </a>
+                <a href="#">
+                    <li>Customer Support</li>
+                </a>
+            </ul>
+
+            <ul>
+                <h3 class="uppercase-convert">travel essentials</h3>
+                <a href="#">
+                    <li>Offers</li>
+                </a>
+                <a href="#">
+                    <li>Airlines Routes</li>
+                </a>
+            </ul>
+            <div class="footer-payment-icons">
+                <h3 class="payment-text uppercase-convert">payment methods</h3>
+                <div class="footer_icons">
+                    <img class="footer-card" src="./Icons/paypal.png" alt="Paypal" />
+                    <img class="footer-card" src="./Icons/master-card.png" alt="Master_card" />
+                    <img class="footer-card" src="./Icons/visa.png" alt="Visa _card" />
+                    <img class="footer-card" src="./Icons/AE.png" alt="American Express_card" />
+                    <img class="footer-card" src="./Icons/discover.png" alt="Discover_card" />
+                </div>
+            </div>
+        </div>
+        <div class="description-application-store">
+            <div class="description-airways">
+                <a href="#"><img src="./Icons/taairways.png" alt="taairways"> TA AIRWAY</a>
+                <p>TA Arirways offers 'End to End' travel solutions including air tickets for more than 200
+                    international and domestic airlines all over world for all major cities </p>
+            </div>
+            <div class="application-in-store">
+                <div>
+                    <h3 class="uppercase-convert">download ta airways</h3>
+                </div>
+                <div>
+                    <a href="https://www.apple.com/in/app-store/"><img src="./Images/apple store.PNG"
+                            alt="apple store" /></a>
+                    <a href="https://play.google.com/store/games?hl=en&gl=US"><img src="./Images/google store.PNG"
+                            alt="google store"></a>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Bottom  -->
+        <div class="footer-socialMedia-links">
+            <div class="social-icons">
+                <div>
+                    <span>Follow Us</span>
+                </div>
+                <div>
+                    <a href="https://www.facebook.com/login/"><img src="./Icons/facebook.png" alt="facebook" /></a>
+                    <a href="https://www.instagram.com/accounts/login/"><img src="./Icons/instagram.png"
+                            alt="instagram" /></a>
+                    <a href="https://identity.flickr.com/login?redir=https%3A%2F%2Fwww.google.com%2F"><img
+                            src="./Icons/flickr.png" alt="flickr" /></a>
+                    <a href="https://twitter.com/i/flow/login"><img src="./Icons/twitter.png" alt="twitter" /></a>
+                </div>
+            </div>
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>Copyright © 2023 TA Airways Private Limited. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="Js/script.js"></script>
+</body>
+
+</html>
